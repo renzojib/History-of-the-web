@@ -1,5 +1,5 @@
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import image from "../assets/headerBackground.png";
+import image from "../../assets/headerBackground.png";
 
 export default function Header() {
   return (
