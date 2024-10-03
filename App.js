@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 
 
-import { TabBarIcon } from './nav/TabBarIcon';
+import { TabBarIcon } from './Components/TabBarIcon';
 import Main from "./Components/Main"
 import Header from './Components/Header/Header';
 
