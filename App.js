@@ -2,11 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 import Main from "./Components/Main"
+import { useState } from 'react';
 
 export default function App() {
+  const [articleToDisplay, setArticleToDisplay] = useState(1)
+
   return (
     <View style={styles.container}>
-      <Main/>
+      <Main articleToDisplay={articleToDisplay}/>
       <StatusBar style="auto" />
     </View>
   );

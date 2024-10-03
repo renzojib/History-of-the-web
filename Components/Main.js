@@ -8,8 +8,7 @@ import {
     View,
   } from 'react-native';
 
-  export default function Main() {
-    const articleToDisplay = 2
+  export default function Main({ articleToDisplay }) {
 
     const modernComputerArticlePictures = [
       require("../assets/ArticleImages/computer.jpg"),
@@ -23,7 +22,7 @@ import {
       require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
     ]
 
-    {if (articleToDisplay === 1) {
+    {if (articleToDisplay === 0) {
       return (
         <SafeAreaView style={styles.container}>
           <ScrollView style={styles.scrollView}>
@@ -31,7 +30,7 @@ import {
               The Modern Computer
             </Text>
             <View  styles={styles.imageStyle1}>
-              <Image source={modernComputerArticlePictures[0]}/>
+              <Image source={modernComputerArticlePictures[0]} />
             </View>
             <Text style={styles.paragraph}>
               The principle of the modern computer was proposed by Alan Turing in his seminal 1936 paper, 
@@ -307,20 +306,15 @@ const styles = StyleSheet.create({
     borderBottomColor: "blue",
     paddingBottom: bottomPadding,    
   },
-  imageContainer1: {
-    width: 100,
-    aspectRatio: 1.5,
+  // imageContainer1: {
+  //   width: 100,
+  //   aspectRatio: 1.5,
 
-  },
-  imageStyle1: {
-    flex: 0,
-    width: "100%",
-    height: "100%", 
-    resizeMode: 'cover',
-  },
-  imageStyle1: {
-    flex: 0,
-    width: '100%',
-    height: '100%',
-  }
+  // },
+  // imageStyle1: {
+  //   flex: 0,
+  //   width: "100%",
+  //   height: "100%", 
+  //   resizeMode: 'contain',
+  // },
 });
