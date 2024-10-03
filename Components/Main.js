@@ -179,6 +179,9 @@ import {
             <Text style={styles.header2}>
               The World Wide Web
             </Text>
+            <View  styles={styles.imageStyle1}>
+              <Image source={modernComputerArticlePictures[4]}/>
+            </View>
             <Text style={styles.paragraph}>
               The Web was invented by English computer scientist Tim Berners-Lee while at CERN in 1989 and opened 
               to the public in 1991. It was conceived as a "universal linked information system". Documents and 
@@ -206,6 +209,9 @@ import {
             <Text style={styles.header3}>
               History
             </Text>
+            <View  style={styles.imageContainer1}>
+              <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
+            </View>
             <Text style={styles.paragraph}>
               The Web was invented by English computer scientist Tim Berners-Lee while working at CERN. He was 
               motivated by the problem of storing, updating, and finding documents and data files in that large 
@@ -301,15 +307,20 @@ const styles = StyleSheet.create({
     borderBottomColor: "blue",
     paddingBottom: bottomPadding,    
   },
+  imageContainer1: {
+    width: 100,
+    aspectRatio: 1.5,
+
+  },
   imageStyle1: {
     flex: 0,
     width: "100%",
     height: "100%", 
     resizeMode: 'cover',
   },
-  imageStyle2: {
+  imageStyle1: {
     flex: 0,
-    width: 100,
-    height: 220,
+    width: '100%',
+    height: '100%',
   }
 });
