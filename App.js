@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 
 import Main from "./Components/Main"
-import Header from './Header/Header';
+import Header from './Components/Header/Header';
 
 export default function App() {
   const [articleToDisplay, setArticleToDisplay] = useState(1);
