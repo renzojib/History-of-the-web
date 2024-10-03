@@ -2,14 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 
-import { TabBarIcon } from './nav/TabBarIcon';
 
+import { TabBarIcon } from './nav/TabBarIcon';
+import Main from "./Components/Main"
+import Header from './Components/Header/Header';
 
 export default function App() {
+  const [articleToDisplay, setArticleToDisplay] = useState(1);
+
   return (
     <View style={styles.container}>
+      <Header></Header>
+      <Main articleToDisplay={articleToDisplay}/>
       <TabBarIcon />
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,6 +22,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: StatusBar.currentHeight,
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
