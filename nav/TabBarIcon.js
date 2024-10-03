@@ -2,11 +2,12 @@ import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
 // Define the screens
 function WWWScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: 'start', alignItems: 'center' }}>
       <Text>WWW</Text>
     </View>
   );
@@ -14,7 +15,7 @@ function WWWScreen() {
 
 function ComputerScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: 'end', alignItems: 'center' }}>
       <Text>Computer</Text>
     </View>
   );
@@ -26,6 +27,7 @@ let iconName;
 
 export function TabBarIcon() {
   return (
+    <NavigationContainer>
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
@@ -54,5 +56,6 @@ export function TabBarIcon() {
       <Tab.Screen name="WWW" component={WWWScreen} options={{ headerShown: false }} />
       <Tab.Screen name="Computer" component={ComputerScreen} options={{ headerShown: false }} />
     </Tab.Navigator>
+    </NavigationContainer>
   );
 }
