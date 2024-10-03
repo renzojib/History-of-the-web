@@ -179,7 +179,7 @@ import {
             <Text style={styles.header2}>
               The World Wide Web
             </Text>
-            <View  styles={styles.imageStyle1}>
+            <View  style={styles.imageStyle1}>
               <Image source={modernComputerArticlePictures[4]}/>
             </View>
             <Text style={styles.paragraph}>
