@@ -11,6 +11,8 @@ import * as Font from 'expo-font';
 import { useEffect } from "react";
 import * as SplashScreen from 'expo-splash-screen';
 
+SplashScreen.preventAutoHideAsync();
+
 export default function WorldWideWeb() {
     const [loaded, error] = Font.useFonts(new Map([
         ['CourierPrimeBold', require("../assets/fonts/CourierPrime-Bold.ttf")],
@@ -166,8 +168,8 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 18,
+    fontFamily: regText,   
     color: textColor,
     paddingBottom: bottomPadding,
-    fontFamily: regText    
   },
 })
