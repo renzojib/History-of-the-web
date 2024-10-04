@@ -41,10 +41,10 @@ export default function TabBarIcon() {
         },
       })}
     >
-      <Tab.Screen name="WWW" component={ModernComputer} 
+      <Tab.Screen name="Computer" component={ModernComputer} 
         options={{ headerShown: false }} 
       />
-      <Tab.Screen name="Computer" component={WorldWideWeb} 
+      <Tab.Screen name="WWW" component={WorldWideWeb} 
         options={{ headerShown: false }} 
       />
     </Tab.Navigator>
