@@ -7,20 +7,41 @@ import {
     Image,
     View,
   } from 'react-native';
+import * as Font from 'expo-font';
+import { useEffect } from "react";
+import * as SplashScreen from 'expo-splash-screen';
 
-  export default function ModernComputer() {
+SplashScreen.preventAutoHideAsync();
 
-    const modernComputerArticlePictures = [
-      require("../assets/ArticleImages/computer.jpg"),
-      require("../assets/ArticleImages/Colossus-1943.jpg"),
-      require("../assets/ArticleImages/eniac-1946.jpg"),
-      require("../assets/ArticleImages/ic.jpg"),
-      require("../assets/ArticleImages/Internet_Key_Layers.png"),
-      require("../assets/ArticleImages/kaypro-II-1982.jpg"),
-      require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
-      require("../assets/ArticleImages/slash.png"),
-      require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
-    ]
+export default function ModernComputer() {
+  const [loaded, error] = Font.useFonts(new Map([
+    ['CourierPrimeBold', require("../assets/fonts/CourierPrime-Bold.ttf")],
+    ['CourierPrime', require("../assets/fonts/CourierPrime-Regular.ttf")],
+    ['CourierPrimeItalic', require("../assets/fonts/CourierPrime-Italic.ttf")],
+    ['CourierPrimeBoldItalic', require("../assets/fonts/CourierPrime-BoldItalic.ttf")]
+  ]))
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
+
+  const modernComputerArticlePictures = [
+    require("../assets/ArticleImages/computer.jpg"),
+    require("../assets/ArticleImages/Colossus-1943.jpg"),
+    require("../assets/ArticleImages/eniac-1946.jpg"),
+    require("../assets/ArticleImages/ic.jpg"),
+    require("../assets/ArticleImages/Internet_Key_Layers.png"),
+    require("../assets/ArticleImages/kaypro-II-1982.jpg"),
+    require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
+    require("../assets/ArticleImages/slash.png"),
+    require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
+  ]
 
   return (
     <View style={styles.container}>
@@ -174,6 +195,8 @@ import {
 const backgroundColor = '#FFEFD3'
 const textColor = "#001f54"
 const bottomPadding = 20
+const boldText = "CourierPrimeBold"
+const regText = 'CourierPrime'
 
 const styles = StyleSheet.create({
   container: {
@@ -187,22 +210,21 @@ const styles = StyleSheet.create({
   },
   header2: {
     fontSize: 30,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   header3: {
     fontSize: 22,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   paragraph: {
     fontSize: 18,
-    fontWeight: "normal",
+    fontFamily: regText,
     color: textColor,
-    borderBottomColor: "blue",
-    paddingBottom: bottomPadding,    
+    paddingBottom: bottomPadding,
   },
   // imageContainer1: {
   //   width: 100,

@@ -1,8 +1,10 @@
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import * as Font from 'expo-font';
+import { useEffect } from "react";
+import * as SplashScreen from 'expo-splash-screen';
 
 // Define the screens
 import WorldWideWeb from './WorldWideWeb';
@@ -13,6 +15,19 @@ const Tab = createBottomTabNavigator();
 let iconName;
 
 export default function TabBarIcon() {
+  const [loaded, error] = Font.useFonts({
+    'CourierPrimeBold': require("../assets/fonts/CourierPrime-Bold.ttf")
+  })
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
 
   return (
     <NavigationContainer>
@@ -37,7 +52,7 @@ export default function TabBarIcon() {
         },
         tabBarLabelStyle: {
           fontSize: 12,
-          fontWeight: 'bold',
+          fontFamily: "CourierPrimeBold"
         },
       })}
     >

@@ -1,12 +1,29 @@
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import image from "../../assets/headerBackground.png";
-import CourierPrime_700Bold from "@expo-google-fonts/courier-prime"
+import * as Font from 'expo-font';
+import { useEffect } from "react";
+import * as SplashScreen from 'expo-splash-screen';
 
 export default function Header() {
+  const [loaded, error] = Font.useFonts({
+    'CourierPrimeBold': require("../../assets/fonts/CourierPrime-Bold.ttf")
+  })
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
+
+
   return (
     <View style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-        <Text style={styles.header1}>History of the Web</Text>
+        <Text style={[styles.header1, {fontFamily: "CourierPrimeBold"}]}>History of the Web</Text>
       </ImageBackground>
     </View>
   );
@@ -22,9 +39,9 @@ const styles = StyleSheet.create({
   header1: {
     textAlign: "center",
     marginVertical: "auto",
-    fontSize: 42,
+    fontSize: 32,
     fontWeight: "bold",
     color: "#DDDDDD",
-    fontFamily: CourierPrime_700Bold
+    fontFamily: "CourierPrime"
   }
 });
