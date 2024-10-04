@@ -154,23 +154,19 @@ const styles = StyleSheet.create({
   },
   header2: {
     fontSize: 30,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
     fontFamily: boldText,
   },
   header3: {
     fontSize: 22,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
     fontFamily: boldText,
   },
   paragraph: {
     fontSize: 18,
-    fontWeight: "normal",
     color: textColor,
-    borderBottomColor: "blue",
     paddingBottom: bottomPadding,
     fontFamily: regText    
   },
