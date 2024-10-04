@@ -23,7 +23,7 @@ export default function WorldWideWeb() {
       ]
 
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.header2}>
               The World Wide Web
@@ -113,7 +113,7 @@ export default function WorldWideWeb() {
               billions of people use to interact on the Internet.
             </Text>
           </ScrollView>
-        </SafeAreaView>
+        </View>
       )
 }
 

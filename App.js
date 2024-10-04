@@ -12,29 +12,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function App() {
 
-  const Tab = createBottomTabNavigator();
-
-  function HomeScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'end', alignItems: 'center' }}>
-        <Text>Home</Text>
-      </View>
-    );
-  }
-  
-  function SettingsScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'end', alignItems: 'center' }}>
-        <Text>Settings</Text>
-      </View>
-    );
-  }
-
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header/>
       <TabBarIcon />
-    </View>
+    </SafeAreaView>
   );
 }
 
