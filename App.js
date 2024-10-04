@@ -1,21 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import { useState } from 'react';
 
-
-import { TabBarIcon } from './Components/TabBarIcon';
-import Main from "./Components/Main"
+import TabBarIcon from './Components/TabBarIcon';
+import ModernComputer from "./Components/ModernComputer"
 import Header from './Components/Header/Header';
+import WorldWideWeb from './Components/WorldWideWeb';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function App() {
-  const [articleToDisplay, setArticleToDisplay] = useState(1);
+
+  const Tab = createBottomTabNavigator();
+
+  function HomeScreen() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'end', alignItems: 'center' }}>
+        <Text>Home</Text>
+      </View>
+    );
+  }
+  
+  function SettingsScreen() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'end', alignItems: 'center' }}>
+        <Text>Settings</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
-      <Header></Header>
-      <Main articleToDisplay={articleToDisplay}/>
+      <Header/>
       <TabBarIcon />
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -25,7 +43,6 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });
