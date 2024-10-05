@@ -7,29 +7,8 @@ import {
     Image,
     View,
   } from 'react-native';
-import * as Font from 'expo-font';
-import { useEffect } from "react";
-import * as SplashScreen from 'expo-splash-screen';
-
-SplashScreen.preventAutoHideAsync();
 
 export default function WorldWideWeb() {
-    const [loaded, error] = Font.useFonts(new Map([
-        ['CourierPrimeBold', require("../assets/fonts/CourierPrime-Bold.ttf")],
-        ['CourierPrime', require("../assets/fonts/CourierPrime-Regular.ttf")],
-        ['CourierPrimeItalic', require("../assets/fonts/CourierPrime-Italic.ttf")],
-        ['CourierPrimeBoldItalic', require("../assets/fonts/CourierPrime-BoldItalic.ttf")]
-      ]))
-  
-      useEffect(() => {
-        if (loaded || error) {
-          SplashScreen.hideAsync();
-        }
-      }, [loaded, error]);
-    
-      if (!loaded && !error) {
-        return null;
-      }
 
     const modernComputerArticlePictures = [
         require("../assets/ArticleImages/computer.jpg"),
@@ -142,12 +121,11 @@ const backgroundColor = '#FFEFD3'
 const textColor = "#001f54"
 const bottomPadding = 20
 const boldText = "CourierPrimeBold"
-const regText = 'CourierPrime'
+const regText = 'CourierPrimeRegular'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     backgroundColor: backgroundColor,

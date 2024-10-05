@@ -11,12 +11,10 @@ import * as SplashScreen from 'expo-splash-screen';
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [loaded, error] = Font.useFonts(new Map([
-    ['CourierPrimeBold', require("./assets/fonts/CourierPrime-Bold.ttf")],
-    ['CourierPrime', require("./assets/fonts/CourierPrime-Regular.ttf")],
-    ['CourierPrimeItalic', require("./assets/fonts/CourierPrime-Italic.ttf")],
-    ['CourierPrimeBoldItalic', require("./assets/fonts/CourierPrime-BoldItalic.ttf")]
-  ]))
+  const [loaded, error] = Font.useFonts({
+    'CourierPrimeBold': require("./assets/fonts/CourierPrime-Bold.ttf"),
+    'CourierPrimeRegular': require("./assets/fonts/CourierPrime-Regular.ttf")
+})
 
   useEffect(() => {
     if (loaded || error) {
@@ -27,6 +25,7 @@ export default function App() {
   if (!loaded && !error) {
     return null;
   }
+
 
 
   return (
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: StatusBar.currentHeight,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#778da9',
     justifyContent: 'center',
   },
 });
