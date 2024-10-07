@@ -9,6 +9,8 @@ import {
   Linking,
 } from "react-native";
 
+import ImageModal from "react-native-image-modal";
+
 export default function WorldWideWeb() {
   const modernComputerArticlePictures = [
     require("../assets/ArticleImages/computer.jpg"),
@@ -27,7 +29,15 @@ export default function WorldWideWeb() {
       <ScrollView style={styles.scrollView}>
         <Text style={styles.header2}>The World Wide Web</Text>
         <View style={styles.imageStyle1}>
-          <Image source={modernComputerArticlePictures[4]}  style={styles.imageStyle1}/>
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
+            source={modernComputerArticlePictures[4]}
+          />
         </View>
         <Text style={styles.paragraph}>
           The Web was invented by English computer scientist Tim Berners-Lee
@@ -71,9 +81,14 @@ export default function WorldWideWeb() {
         </Text>
         <Text style={styles.header3}>History</Text>
         <View style={styles.imageContainer1}>
-          <Image
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
             source={modernComputerArticlePictures[6]}
-            style={styles.imageStyle1}
           />
         </View>
         <Text style={styles.paragraph}>

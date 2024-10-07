@@ -10,6 +10,8 @@ import {
   Linking,
 } from "react-native";
 
+import ImageModal from "react-native-image-modal";
+
 export default function ModernComputer() {
   const modernComputerArticlePictures = [
     require("../assets/ArticleImages/computer.jpg"),
@@ -30,13 +32,17 @@ export default function ModernComputer() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
-
-        <Text style={styles.header2}>
-          The Modern Computer
-        </Text>
-        <View  style={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[1]} style={styles.imageStyle1} onLoad={({nativeEvent: {source: {width, height}}}) => console.log("image first:", {width, height})}/>
-
+        <Text style={styles.header2}>The Modern Computer</Text>
+        <View styles={styles.imageStyle1}>
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
+            source={modernComputerArticlePictures[0]}
+          />
         </View>
         <Text style={styles.paragraph}>
           The principle of the modern computer was proposed by Alan Turing in
@@ -53,10 +59,17 @@ export default function ModernComputer() {
           limitations imposed by their finite memory stores, modern computers
           are said to be Turing-complete, which is to say, they have algorithm
           execution capability equivalent to a universal Turing machine.
-        </Text>        
-        <View style={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
-        </View>
+        </Text>
+        <Text style={styles.header3}>Stored programs</Text>
+        <ImageModal
+          resizeMode="contain"
+          imageBackgroundColor="#000000"
+          style={{
+            width: 250,
+            height: 250,
+          }}
+          source={modernComputerArticlePictures[1]}
+        />
         <Text style={styles.paragraph}>
           Early computing machines had fixed programs. Changing its function
           required the re-wiring and re-structuring of the machine. With the
@@ -95,12 +108,16 @@ export default function ModernComputer() {
           the Cambridge EDSAC of 1949, became operational in April 1951 and ran
           the world's first routine office computer job.
         </Text>
-        <Text style={styles.header3}>
-          Transistors
-        </Text>
-        <View style={styles.imageContainer1}>
-        <Image source={modernComputerArticlePictures[3]} style={styles.imageStyle1}/>
-        </View>
+        <Text style={styles.header3}>Transistors</Text>
+        <ImageModal
+          resizeMode="contain"
+          imageBackgroundColor="#000000"
+          style={{
+            width: 250,
+            height: 250,
+          }}
+          source={modernComputerArticlePictures[3]}
+        />
         <Text style={styles.paragraph}>
           The concept of a field-effect transistor was proposed by Julius Edgar
           Lilienfeld in 1925. John Bardeen and Walter Brattain, while working
@@ -195,8 +212,16 @@ export default function ModernComputer() {
           since become the most critical device component in modern ICs.
         </Text>
         <Text style={styles.header3}>Mobile computers</Text>
-        <View style={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[7]} style={styles.imageStyle1}/>
+        <View styles={styles.imageStyle2}>
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
+            source={modernComputerArticlePictures[4]}
+          />
         </View>
         <Text style={styles.paragraph}>
           The first mobile computers were heavy and ran from mains power. The 50
