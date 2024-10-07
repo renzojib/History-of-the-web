@@ -15,7 +15,7 @@ export default function ModernComputer() {
     require("../assets/ArticleImages/computer.jpg"),
     require("../assets/ArticleImages/Colossus-1943.jpg"),
     require("../assets/ArticleImages/eniac-1946.jpg"),
-    require("../assets/ArticleImages/ic.jpg"),
+    require("../assets/ArticleImages/integrated_circuit.jpeg"),
     require("../assets/ArticleImages/Internet_Key_Layers.png"),
     require("../assets/ArticleImages/kaypro-II-1982.jpg"),
     require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
@@ -23,14 +23,18 @@ export default function ModernComputer() {
     require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
   ]
 
+  // Image.getSize("../assets/ArticleImages/eniac-1946.jpg",(w, h) => {
+  //   console.log(w, h)
+  // })
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.header2}>
           The Modern Computer
         </Text>
-        <View  styles={styles.imageStyle1}>
-          <Image source={modernComputerArticlePictures[0]} />
+        <View  style={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[1]} style={styles.imageStyle1} onLoad={({nativeEvent: {source: {width, height}}}) => console.log("image first:", {width, height})}/>
         </View>
         <Text style={styles.paragraph}>
           The principle of the modern computer was proposed by Alan Turing in his seminal 1936 paper, 
@@ -48,7 +52,11 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Stored programs
         </Text>
-        <Image source={modernComputerArticlePictures[1]} styles={styles.imageStyle2}/>
+        
+        <View style={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
+        </View>
+
         <Text style={styles.paragraph}>
           Early computing machines had fixed programs. Changing its function required the re-wiring and 
           re-structuring of the machine. With the proposal of the stored-program computer this changed. 
@@ -83,7 +91,9 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Transistors
         </Text>
-        <Image source={modernComputerArticlePictures[3]} styles={styles.imageStyle1}/>
+        <View style={styles.imageContainer1}>
+        <Image source={modernComputerArticlePictures[3]} style={styles.imageStyle1}/>
+        </View>
         <Text style={styles.paragraph}>
           The concept of a field-effect transistor was proposed by Julius Edgar Lilienfeld in 1925. 
           John Bardeen and Walter Brattain, while working under William Shockley at Bell Labs, built 
@@ -150,8 +160,8 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Mobile computers
         </Text>
-        <View styles={styles.imageStyle2}>
-          <Image source={modernComputerArticlePictures[4]} />
+        <View style={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[7]} style={styles.imageStyle1}/>
         </View>
         <Text style={styles.paragraph}>
           The first mobile computers were heavy and ran from mains power. The 50 lb (23 kg) IBM 5100 
@@ -205,15 +215,13 @@ const styles = StyleSheet.create({
     paddingBottom: bottomPadding,
     fontFamily: regText,
   },
-  // imageContainer1: {
-  //   width: 100,
-  //   aspectRatio: 1.5,
-
-  // },
-  // imageStyle1: {
-  //   flex: 0,
-  //   width: "100%",
-  //   height: "100%", 
-  //   resizeMode: 'contain',
-  // },
+  imageContainer1: {
+    width: "100%",
+    // height: 250,
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    resizeMode: "contain",
+    borderRadius: 30,
+  },
 });

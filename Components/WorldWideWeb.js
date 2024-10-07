@@ -10,17 +10,17 @@ import {
 
 export default function WorldWideWeb() {
 
-    const modernComputerArticlePictures = [
-        require("../assets/ArticleImages/computer.jpg"),
-        require("../assets/ArticleImages/Colossus-1943.jpg"),
-        require("../assets/ArticleImages/eniac-1946.jpg"),
-        require("../assets/ArticleImages/ic.jpg"),
-        require("../assets/ArticleImages/Internet_Key_Layers.png"),
-        require("../assets/ArticleImages/kaypro-II-1982.jpg"),
-        require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
-        require("../assets/ArticleImages/slash.png"),
-        require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
-      ]
+  const modernComputerArticlePictures = [
+    require("../assets/ArticleImages/computer.jpg"),
+    require("../assets/ArticleImages/Colossus-1943.jpg"),
+    require("../assets/ArticleImages/eniac-1946.jpg"),
+    require("../assets/ArticleImages/integrated_circuit.jpeg"),
+    require("../assets/ArticleImages/Internet_Key_Layers.png"),
+    require("../assets/ArticleImages/kaypro-II-1982.jpg"),
+    require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
+    require("../assets/ArticleImages/slash.png"),
+    require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
+  ]
 
     return (
         <View style={styles.container}>
@@ -28,8 +28,8 @@ export default function WorldWideWeb() {
             <Text style={styles.header2}>
               The World Wide Web
             </Text>
-            <View  style={styles.imageStyle1}>
-              <Image source={modernComputerArticlePictures[4]}/>
+            <View  style={styles.imageContainer1}>
+              <Image source={modernComputerArticlePictures[4]} style={styles.imageStyle1} />
             </View>
             <Text style={styles.paragraph}>
               The Web was invented by English computer scientist Tim Berners-Lee while at CERN in 1989 and opened 
@@ -149,5 +149,16 @@ const styles = StyleSheet.create({
     fontFamily: regText,   
     color: textColor,
     paddingBottom: bottomPadding,
+  },
+  imageContainer1: {
+    width: "100%",
+    height: 270,
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    borderRadius: 30,
   },
 })
