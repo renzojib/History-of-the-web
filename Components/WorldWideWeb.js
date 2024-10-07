@@ -31,11 +31,8 @@ export default function WorldWideWeb() {
         <View style={styles.imageStyle1}>
           <ImageModal
             resizeMode="contain"
-            imageBackgroundColor="#000000"
-            style={{
-              width: 250,
-              height: 250,
-            }}
+            imageBackgroundColor="transparent"
+            style={styles.imageStyle1}
             source={modernComputerArticlePictures[4]}
           />
         </View>
@@ -83,11 +80,8 @@ export default function WorldWideWeb() {
         <View style={styles.imageContainer1}>
           <ImageModal
             resizeMode="contain"
-            imageBackgroundColor="#000000"
-            style={{
-              width: 250,
-              height: 250,
-            }}
+            imageBackgroundColor="transparent"
+            style={styles.imageStyle1}
             source={modernComputerArticlePictures[6]}
           />
         </View>

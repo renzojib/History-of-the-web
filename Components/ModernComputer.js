@@ -33,14 +33,11 @@ export default function ModernComputer() {
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.header2}>The Modern Computer</Text>
-        <View styles={styles.imageStyle1}>
+        <View styles={styles.imageContainer1}>
           <ImageModal
             resizeMode="contain"
-            imageBackgroundColor="#000000"
-            style={{
-              width: 250,
-              height: 250,
-            }}
+            imageBackgroundColor="transparent"
+            style={styles.imageStyle1}
             source={modernComputerArticlePictures[0]}
           />
         </View>
@@ -61,15 +58,13 @@ export default function ModernComputer() {
           execution capability equivalent to a universal Turing machine.
         </Text>
         <Text style={styles.header3}>Stored programs</Text>
+        <View style={styles.imageContainer1}>
         <ImageModal
-          resizeMode="contain"
-          imageBackgroundColor="#000000"
-          style={{
-            width: 250,
-            height: 250,
-          }}
+          imageBackgroundColor="transparent"
+          style={styles.imageStyle1}
           source={modernComputerArticlePictures[1]}
         />
+        </View>
         <Text style={styles.paragraph}>
           Early computing machines had fixed programs. Changing its function
           required the re-wiring and re-structuring of the machine. With the
@@ -109,15 +104,15 @@ export default function ModernComputer() {
           the world's first routine office computer job.
         </Text>
         <Text style={styles.header3}>Transistors</Text>
+        <View style={styles.imageContainer1}>
+
         <ImageModal
           resizeMode="contain"
-          imageBackgroundColor="#000000"
-          style={{
-            width: 250,
-            height: 250,
-          }}
+          imageBackgroundColor="transparent"
+          style={styles.imageStyle1}
           source={modernComputerArticlePictures[3]}
-        />
+          />
+          </View>
         <Text style={styles.paragraph}>
           The concept of a field-effect transistor was proposed by Julius Edgar
           Lilienfeld in 1925. John Bardeen and Walter Brattain, while working
@@ -212,14 +207,11 @@ export default function ModernComputer() {
           since become the most critical device component in modern ICs.
         </Text>
         <Text style={styles.header3}>Mobile computers</Text>
-        <View styles={styles.imageStyle2}>
+        <View styles={styles.imageStyle1}>
           <ImageModal
             resizeMode="contain"
-            imageBackgroundColor="#000000"
-            style={{
-              width: 250,
-              height: 250,
-            }}
+            imageBackgroundColor="transparent"
+            style={styles.imageStyle1}
             source={modernComputerArticlePictures[4]}
           />
         </View>
