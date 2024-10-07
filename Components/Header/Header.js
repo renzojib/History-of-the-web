@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     height: 80,
   },
   image: {
-    height: 80
+    width: "100%",
+    height: 80,
   },
   header1: {
     textAlign: "center",

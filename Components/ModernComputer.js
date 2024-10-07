@@ -17,13 +17,17 @@ export default function ModernComputer() {
     require("../assets/ArticleImages/computer.jpg"),
     require("../assets/ArticleImages/Colossus-1943.jpg"),
     require("../assets/ArticleImages/eniac-1946.jpg"),
-    require("../assets/ArticleImages/ic.jpg"),
+    require("../assets/ArticleImages/integrated_circuit.jpeg"),
     require("../assets/ArticleImages/Internet_Key_Layers.png"),
     require("../assets/ArticleImages/kaypro-II-1982.jpg"),
     require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
     require("../assets/ArticleImages/slash.png"),
     require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
   ];
+
+  // Image.getSize("../assets/ArticleImages/eniac-1946.jpg",(w, h) => {
+  //   console.log(w, h)
+  // })
 
   return (
     <View style={styles.container}>
@@ -274,15 +278,12 @@ const styles = StyleSheet.create({
     paddingBottom: bottomPadding,
     fontFamily: regText,
   },
-  // imageContainer1: {
-  //   width: 100,
-  //   aspectRatio: 1.5,
-
-  // },
-  // imageStyle1: {
-  //   flex: 0,
-  //   width: "100%",
-  //   height: "100%",
-  //   resizeMode: 'contain',
-  // },
+  imageContainer1: {
+    width: "100%",
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    resizeMode: "contain",
+    borderRadius: 30,
+  },
 });
