@@ -10,6 +10,8 @@ import {
   Linking,
 } from "react-native";
 
+import ImageModal from "react-native-image-modal";
+
 export default function ModernComputer() {
   const modernComputerArticlePictures = [
     require("../assets/ArticleImages/computer.jpg"),
@@ -28,7 +30,15 @@ export default function ModernComputer() {
       <ScrollView style={styles.scrollView}>
         <Text style={styles.header2}>The Modern Computer</Text>
         <View styles={styles.imageStyle1}>
-          <Image source={modernComputerArticlePictures[0]} />
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
+            source={modernComputerArticlePictures[0]}
+          />
         </View>
         <Text style={styles.paragraph}>
           The principle of the modern computer was proposed by Alan Turing in
@@ -47,9 +57,14 @@ export default function ModernComputer() {
           execution capability equivalent to a universal Turing machine.
         </Text>
         <Text style={styles.header3}>Stored programs</Text>
-        <Image
+        <ImageModal
+          resizeMode="contain"
+          imageBackgroundColor="#000000"
+          style={{
+            width: 250,
+            height: 250,
+          }}
           source={modernComputerArticlePictures[1]}
-          styles={styles.imageStyle2}
         />
         <Text style={styles.paragraph}>
           Early computing machines had fixed programs. Changing its function
@@ -90,9 +105,14 @@ export default function ModernComputer() {
           the world's first routine office computer job.
         </Text>
         <Text style={styles.header3}>Transistors</Text>
-        <Image
+        <ImageModal
+          resizeMode="contain"
+          imageBackgroundColor="#000000"
+          style={{
+            width: 250,
+            height: 250,
+          }}
           source={modernComputerArticlePictures[3]}
-          styles={styles.imageStyle1}
         />
         <Text style={styles.paragraph}>
           The concept of a field-effect transistor was proposed by Julius Edgar
@@ -189,7 +209,15 @@ export default function ModernComputer() {
         </Text>
         <Text style={styles.header3}>Mobile computers</Text>
         <View styles={styles.imageStyle2}>
-          <Image source={modernComputerArticlePictures[4]} />
+          <ImageModal
+            resizeMode="contain"
+            imageBackgroundColor="#000000"
+            style={{
+              width: 250,
+              height: 250,
+            }}
+            source={modernComputerArticlePictures[4]}
+          />
         </View>
         <Text style={styles.paragraph}>
           The first mobile computers were heavy and ran from mains power. The 50
