@@ -217,7 +217,6 @@ const styles = StyleSheet.create({
   },
   imageContainer1: {
     width: "100%",
-    // height: 250,
     paddingBottom: bottomPadding,
   },
   imageStyle1: {
