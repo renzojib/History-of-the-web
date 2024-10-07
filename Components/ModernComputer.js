@@ -23,6 +23,10 @@ export default function ModernComputer() {
     require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
   ]
 
+  // Image.getSize("../assets/ArticleImages/eniac-1946.jpg",(w, h) => {
+  //   console.log(w, h)
+  // })
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
@@ -30,10 +34,7 @@ export default function ModernComputer() {
           The Modern Computer
         </Text>
         <View  style={styles.imageContainer1}>
-              <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
-            </View>
-        <View  styles={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[1]} style={styles.imageStyle1}/>
+          <Image source={modernComputerArticlePictures[1]} style={styles.imageStyle1} onLoad={({nativeEvent: {source: {width, height}}}) => console.log("image first:", {width, height})}/>
         </View>
         <Text style={styles.paragraph}>
           The principle of the modern computer was proposed by Alan Turing in his seminal 1936 paper, 
@@ -53,7 +54,7 @@ export default function ModernComputer() {
         </Text>
         
         <View style={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[6]} styles={styles.imageStyle1}/>
+          <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
         </View>
 
         <Text style={styles.paragraph}>
@@ -90,7 +91,9 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Transistors
         </Text>
-        <Image source={modernComputerArticlePictures[3]} styles={styles.imageStyle1}/>
+        <View style={styles.imageContainer1}>
+        <Image source={modernComputerArticlePictures[3]} style={styles.imageStyle1}/>
+        </View>
         <Text style={styles.paragraph}>
           The concept of a field-effect transistor was proposed by Julius Edgar Lilienfeld in 1925. 
           John Bardeen and Walter Brattain, while working under William Shockley at Bell Labs, built 
@@ -158,7 +161,7 @@ export default function ModernComputer() {
           Mobile computers
         </Text>
         <View style={styles.imageContainer1}>
-          <Image source={modernComputerArticlePictures[4]} style={styles.imageContainer1}/>
+          <Image source={modernComputerArticlePictures[7]} style={styles.imageStyle1}/>
         </View>
         <Text style={styles.paragraph}>
           The first mobile computers were heavy and ran from mains power. The 50 lb (23 kg) IBM 5100 
@@ -214,13 +217,11 @@ const styles = StyleSheet.create({
   },
   imageContainer1: {
     width: "100%",
-    height: 250,
+    // height: 250,
     paddingBottom: bottomPadding,
   },
   imageStyle1: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
+    resizeMode: "contain",
     borderRadius: 30,
   },
 });
