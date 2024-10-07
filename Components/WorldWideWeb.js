@@ -29,7 +29,7 @@ export default function WorldWideWeb() {
               The World Wide Web
             </Text>
             <View  style={styles.imageContainer1}>
-              <Image source={modernComputerArticlePictures[4]} style={styles.imageStyle1}/>
+              <Image source={modernComputerArticlePictures[4]} style={styles.imageStyle1} />
             </View>
             <Text style={styles.paragraph}>
               The Web was invented by English computer scientist Tim Berners-Lee while at CERN in 1989 and opened 
