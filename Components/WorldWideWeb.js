@@ -14,7 +14,7 @@ export default function WorldWideWeb() {
     require("../assets/ArticleImages/computer.jpg"),
     require("../assets/ArticleImages/Colossus-1943.jpg"),
     require("../assets/ArticleImages/eniac-1946.jpg"),
-    require("../assets/ArticleImages/ic.jpg"),
+    require("../assets/ArticleImages/integrated_circuit.jpg"),
     require("../assets/ArticleImages/Internet_Key_Layers.png"),
     require("../assets/ArticleImages/kaypro-II-1982.jpg"),
     require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
