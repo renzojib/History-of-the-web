@@ -27,7 +27,7 @@ export default function WorldWideWeb() {
       <ScrollView style={styles.scrollView}>
         <Text style={styles.header2}>The World Wide Web</Text>
         <View style={styles.imageStyle1}>
-          <Image source={modernComputerArticlePictures[4]} />
+          <Image source={modernComputerArticlePictures[4]}  style={styles.imageStyle1}/>
         </View>
         <Text style={styles.paragraph}>
           The Web was invented by English computer scientist Tim Berners-Lee
@@ -187,4 +187,12 @@ const styles = StyleSheet.create({
     color: textColor,
     paddingBottom: bottomPadding,
   },
-});
+  imageContainer1: {
+    width: "100%",
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    resizeMode: "cover",
+    borderRadius: 30,
+  },
+})
