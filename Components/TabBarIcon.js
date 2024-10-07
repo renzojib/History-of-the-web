@@ -1,6 +1,5 @@
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -37,14 +36,14 @@ export default function TabBarIcon() {
         },
         tabBarLabelStyle: {
           fontSize: 12,
-          fontWeight: 'bold',
+          fontFamily: "CourierPrimeBold"
         },
       })}
     >
-      <Tab.Screen name="Computer" component={ModernComputer} 
+      <Tab.Screen name="WWW" component={WorldWideWeb} 
         options={{ headerShown: false }} 
       />
-      <Tab.Screen name="WWW" component={WorldWideWeb} 
+      <Tab.Screen name="Computer" component={ModernComputer} 
         options={{ headerShown: false }} 
       />
     </Tab.Navigator>

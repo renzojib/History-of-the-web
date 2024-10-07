@@ -120,11 +120,12 @@ export default function WorldWideWeb() {
 const backgroundColor = '#FFEFD3'
 const textColor = "#001f54"
 const bottomPadding = 20
+const boldText = "CourierPrimeBold"
+const regText = 'CourierPrimeRegular'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     backgroundColor: backgroundColor,
@@ -133,21 +134,20 @@ const styles = StyleSheet.create({
   },
   header2: {
     fontSize: 30,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   header3: {
     fontSize: 22,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   paragraph: {
     fontSize: 18,
-    fontWeight: "normal",
+    fontFamily: regText,   
     color: textColor,
-    borderBottomColor: "blue",
-    paddingBottom: bottomPadding,    
+    paddingBottom: bottomPadding,
   },
 })

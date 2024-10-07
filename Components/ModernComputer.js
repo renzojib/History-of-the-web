@@ -6,21 +6,22 @@ import {
     StatusBar,
     Image,
     View,
+    Platform,
   } from 'react-native';
 
-  export default function ModernComputer() {
+export default function ModernComputer() {
 
-    const modernComputerArticlePictures = [
-      require("../assets/ArticleImages/computer.jpg"),
-      require("../assets/ArticleImages/Colossus-1943.jpg"),
-      require("../assets/ArticleImages/eniac-1946.jpg"),
-      require("../assets/ArticleImages/ic.jpg"),
-      require("../assets/ArticleImages/Internet_Key_Layers.png"),
-      require("../assets/ArticleImages/kaypro-II-1982.jpg"),
-      require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
-      require("../assets/ArticleImages/slash.png"),
-      require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
-    ]
+  const modernComputerArticlePictures = [
+    require("../assets/ArticleImages/computer.jpg"),
+    require("../assets/ArticleImages/Colossus-1943.jpg"),
+    require("../assets/ArticleImages/eniac-1946.jpg"),
+    require("../assets/ArticleImages/ic.jpg"),
+    require("../assets/ArticleImages/Internet_Key_Layers.png"),
+    require("../assets/ArticleImages/kaypro-II-1982.jpg"),
+    require("../assets/ArticleImages/next-computer-First_Web_Server.jpg"),
+    require("../assets/ArticleImages/slash.png"),
+    require("../assets/ArticleImages/Surface_Web_n_Deep_Web.jpg"),
+  ]
 
   return (
     <View style={styles.container}>
@@ -174,11 +175,12 @@ import {
 const backgroundColor = '#FFEFD3'
 const textColor = "#001f54"
 const bottomPadding = 20
+const boldText = "CourierPrimeBold"
+const regText = 'CourierPrimeRegular'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     backgroundColor: backgroundColor,
@@ -187,22 +189,21 @@ const styles = StyleSheet.create({
   },
   header2: {
     fontSize: 30,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   header3: {
     fontSize: 22,
-    fontWeight: "bold",
     color: textColor,
     paddingBottom: bottomPadding,
+    fontFamily: boldText,
   },
   paragraph: {
     fontSize: 18,
-    fontWeight: "normal",
     color: textColor,
-    borderBottomColor: "blue",
-    paddingBottom: bottomPadding,    
+    paddingBottom: bottomPadding,
+    fontFamily: regText,
   },
   // imageContainer1: {
   //   width: 100,
