@@ -1,22 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import { useState } from 'react';
 
-
-import { TabBarIcon } from './nav/TabBarIcon';
-import Main from "./Components/Main"
+import TabBarIcon from './Components/TabBarIcon';
+import ModernComputer from "./Components/ModernComputer"
 import Header from './Components/Header/Header';
+import WorldWideWeb from './Components/WorldWideWeb';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function App() {
-  const [articleToDisplay, setArticleToDisplay] = useState(1);
 
   return (
-    <View style={styles.container}>
-      <Header></Header>
-      <Main articleToDisplay={articleToDisplay}/>
+    <SafeAreaView style={styles.container}>
+      <Header/>
       <TabBarIcon />
-      <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });
