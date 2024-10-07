@@ -28,8 +28,8 @@ export default function WorldWideWeb() {
             <Text style={styles.header2}>
               The World Wide Web
             </Text>
-            <View  style={styles.imageStyle1}>
-              <Image source={modernComputerArticlePictures[4]}/>
+            <View  style={styles.imageContainer1}>
+              <Image source={modernComputerArticlePictures[4]} style={styles.imageStyle1}/>
             </View>
             <Text style={styles.paragraph}>
               The Web was invented by English computer scientist Tim Berners-Lee while at CERN in 1989 and opened 
@@ -149,5 +149,16 @@ const styles = StyleSheet.create({
     fontFamily: regText,   
     color: textColor,
     paddingBottom: bottomPadding,
+  },
+  imageContainer1: {
+    width: "100%",
+    height: 250,
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    borderRadius: 30,
   },
 })

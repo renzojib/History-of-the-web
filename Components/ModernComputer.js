@@ -29,8 +29,11 @@ export default function ModernComputer() {
         <Text style={styles.header2}>
           The Modern Computer
         </Text>
-        <View  styles={styles.imageStyle1}>
-          <Image source={modernComputerArticlePictures[0]} />
+        <View  style={styles.imageContainer1}>
+              <Image source={modernComputerArticlePictures[6]} style={styles.imageStyle1}/>
+            </View>
+        <View  styles={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[1]} style={styles.imageStyle1}/>
         </View>
         <Text style={styles.paragraph}>
           The principle of the modern computer was proposed by Alan Turing in his seminal 1936 paper, 
@@ -48,7 +51,11 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Stored programs
         </Text>
-        <Image source={modernComputerArticlePictures[1]} styles={styles.imageStyle2}/>
+        
+        <View style={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[6]} styles={styles.imageStyle1}/>
+        </View>
+
         <Text style={styles.paragraph}>
           Early computing machines had fixed programs. Changing its function required the re-wiring and 
           re-structuring of the machine. With the proposal of the stored-program computer this changed. 
@@ -150,8 +157,8 @@ export default function ModernComputer() {
         <Text style={styles.header3}>
           Mobile computers
         </Text>
-        <View styles={styles.imageStyle2}>
-          <Image source={modernComputerArticlePictures[4]} />
+        <View style={styles.imageContainer1}>
+          <Image source={modernComputerArticlePictures[4]} style={styles.imageContainer1}/>
         </View>
         <Text style={styles.paragraph}>
           The first mobile computers were heavy and ran from mains power. The 50 lb (23 kg) IBM 5100 
@@ -205,15 +212,17 @@ const styles = StyleSheet.create({
     paddingBottom: bottomPadding,
     fontFamily: regText,
   },
-  // imageContainer1: {
-  //   width: 100,
-  //   aspectRatio: 1.5,
-
-  // },
-  // imageStyle1: {
-  //   flex: 0,
-  //   width: "100%",
-  //   height: "100%", 
-  //   resizeMode: 'contain',
-  // },
+  imageContainer1: {
+    width: 350,
+    height: 250,
+    paddingBottom: bottomPadding,
+  },
+  imageStyle1: {
+    borderWidth: 2,
+    borderColor: "lime",
+    width: "100%",
+    height: "20%",
+    resizeMode: "cover",
+    borderRadius: 30,
+  },
 });
