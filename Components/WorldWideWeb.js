@@ -6,6 +6,7 @@ import {
   StatusBar,
   Image,
   View,
+  Linking,
 } from "react-native";
 
 export default function WorldWideWeb() {
